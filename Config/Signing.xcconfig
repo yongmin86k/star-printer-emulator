@@ -1,0 +1,10 @@
+// Shared signing defaults: ad-hoc, so a fresh clone builds with no Apple account.
+// Your bundle ID, team and identity go in Config/Local.xcconfig (git-ignored). See DEPLOYMENT.md.
+// Don't pick a Team in Xcode's Signing UI: it writes DEVELOPMENT_TEAM into project.pbxproj,
+// which overrides this file and gets committed.
+// Placeholder bundle ID for local builds; set your real one in Local.xcconfig.
+PRODUCT_BUNDLE_IDENTIFIER = dev.staremu.StarEmu
+CODE_SIGN_STYLE = Automatic
+CODE_SIGN_IDENTITY = -
+
+#include? "Local.xcconfig"

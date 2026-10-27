@@ -1,7 +1,6 @@
 .build/
 .swiftpm/
 DerivedData/
-*.xcodeproj/
 xcuserdata/
 captures/
 .DS_Store
@@ -16,3 +15,6 @@ CONTRIBUTING.md
 
 # App Store submission drafts; local only
 appstore/
+
+# Per-developer signing (team ID); template is Config/Local.xcconfig.example
+Config/Local.xcconfig

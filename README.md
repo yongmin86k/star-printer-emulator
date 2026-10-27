@@ -80,6 +80,8 @@ UPDATE_GOLDENS=1 swift test    # after an intended rendering change; review the 
 scripts/release.sh 0.1.0       # CLI + app + DMG (set SIGN_IDENTITY / NOTARY_PROFILE to sign and notarize)
 ```
 
+Signing and shipping (team setup, TestFlight, notarized DMG): see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ## Known limitations
 
 - Glyph shapes come from Menlo, not the printer's ROM font. Cell sizes match, so line breaks and columns are exact, but letterforms differ.

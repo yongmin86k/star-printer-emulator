@@ -1,6 +1,5 @@
 name: StarEmu
 options:
-  bundleIdPrefix: dev.staremu
   deploymentTarget:
     macOS: "14.0"
 packages:
@@ -11,20 +10,20 @@ targets:
     type: application
     platform: macOS
     sources: [App]
+    configFiles:
+      Debug: Config/Signing.xcconfig
+      Release: Config/Signing.xcconfig
     dependencies:
       - package: StarEmu
         product: StarEmuCore
     settings:
       base:
         PRODUCT_NAME: "PRNT Emulator"
-        PRODUCT_BUNDLE_IDENTIFIER: dev.staremu.StarEmu
         MARKETING_VERSION: 0.1.0
         CURRENT_PROJECT_VERSION: 1
         SWIFT_VERSION: "6.0"
         ENABLE_HARDENED_RUNTIME: YES
         CODE_SIGN_ENTITLEMENTS: App/StarEmu.entitlements
-        CODE_SIGN_STYLE: Automatic
-        CODE_SIGN_IDENTITY: "-"
         GENERATE_INFOPLIST_FILE: YES
         ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
         INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Receives print jobs from POS devices on your local network."
