@@ -18,7 +18,7 @@ targets:
         product: StarEmuCore
     settings:
       base:
-        PRODUCT_NAME: "PRNT Emulator"
+        PRODUCT_NAME: "StarPrinter Emulator"
         MARKETING_VERSION: 0.1.0
         CURRENT_PROJECT_VERSION: 1
         SWIFT_VERSION: "6.0"

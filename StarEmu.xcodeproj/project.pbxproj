@@ -204,7 +204,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_NAME = "PRNT Emulator";
+				PRODUCT_NAME = "StarPrinter Emulator";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
 			};
@@ -290,7 +290,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.1.0;
-				PRODUCT_NAME = "PRNT Emulator";
+				PRODUCT_NAME = "StarPrinter Emulator";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 6.0;
 			};

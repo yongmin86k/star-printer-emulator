@@ -1,4 +1,4 @@
-# PRNT Emulator: a Star receipt printer emulator for macOS
+# StarPrinter Emulator: a Star receipt printer emulator for macOS
 
 A Mac app (and CLI) that **shows up on your LAN as a Star Micronics receipt printer**: an **mC-Print3** or a **TSP100IIIW**. When a POS app prints to it, the emulator renders the receipt as you'd see it on paper, shows it in a preview, and saves it as a PNG. No hardware or paper needed, and no walking to the printer.
 

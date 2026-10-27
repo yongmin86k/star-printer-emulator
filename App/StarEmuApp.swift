@@ -13,7 +13,7 @@ struct StarEmuApp: App {
     }
 
     var body: some Scene {
-        Window("PRNT Emulator", id: "main") {
+        Window("StarPrinter Emulator", id: "main") {
             ContentView()
                 .environment(model)
                 .task { model.start() }
@@ -27,7 +27,7 @@ struct StarEmuApp: App {
                 .environment(settings)
         }
 
-        MenuBarExtra("PRNT Emulator", systemImage: "printer", isInserted: $settings.showMenuBarIcon) {
+        MenuBarExtra("StarPrinter Emulator", systemImage: "printer", isInserted: $settings.showMenuBarIcon) {
             MenuBarContent()
                 .environment(model)
         }

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Build a release: `staremu` CLI + "PRNT Emulator.app" in a DMG.
+# Build a release: `staremu` CLI + "StarPrinter Emulator.app" in a DMG.
 #
 #   scripts/release.sh 0.1.0                       # unsigned (ad-hoc) build, for local use
 #   SIGN_IDENTITY="Developer ID Application: …" NOTARY_PROFILE=staremu scripts/release.sh 0.1.0
@@ -11,7 +11,7 @@ cd "$(dirname "$0")/.."
 
 VERSION="${1:?usage: scripts/release.sh <version>}"
 OUT="build/release/$VERSION"
-APP_NAME="PRNT Emulator"
+APP_NAME="StarPrinter Emulator"
 rm -rf "$OUT" && mkdir -p "$OUT"
 
 echo "==> Tests"
@@ -45,13 +45,13 @@ STAGE="$OUT/dmg"
 mkdir -p "$STAGE"
 cp -R "$OUT/$APP_NAME.app" "$STAGE/"
 ln -s /Applications "$STAGE/Applications"
-hdiutil create -volname "$APP_NAME $VERSION" -srcfolder "$STAGE" -ov -format UDZO "$OUT/PRNT-Emulator-$VERSION.dmg" -quiet
+hdiutil create -volname "$APP_NAME $VERSION" -srcfolder "$STAGE" -ov -format UDZO "$OUT/StarPrinter-Emulator-$VERSION.dmg" -quiet
 rm -rf "$STAGE"
 
 if [[ -n "${NOTARY_PROFILE:-}" ]]; then
   echo "==> Notarize"
-  xcrun notarytool submit "$OUT/PRNT-Emulator-$VERSION.dmg" --keychain-profile "$NOTARY_PROFILE" --wait
-  xcrun stapler staple "$OUT/PRNT-Emulator-$VERSION.dmg"
+  xcrun notarytool submit "$OUT/StarPrinter-Emulator-$VERSION.dmg" --keychain-profile "$NOTARY_PROFILE" --wait
+  xcrun stapler staple "$OUT/StarPrinter-Emulator-$VERSION.dmg"
 else
   echo "(not notarized: set SIGN_IDENTITY and NOTARY_PROFILE for a distributable build)"
 fi
